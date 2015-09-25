@@ -1,0 +1,91 @@
+2015/9/25
+0.3.2-2015
+[gcmdiskheadertool] fixed lvalue assignment errors
+[gcmdiskheaderintotool] fixed lvalue assignment errors
+[gcmdiskheader] fixed lvalue assignment errors
+
+2004/7/19
+0.3.2
+[all] fixed a bug where the file would be opened as read/write even if we
+	were only going to be reading (which would lead to permission denied errors
+	on read-only files)
+[all] improved hexadecimal value output
+[all] for all unsigned 32-bit int commandline input, if you precede the value
+	with "0x" the value will be interpreted as hex. (ie 0x0100 for 256)
+[gcmbnrtool] fixed a bug where a bnr was incorrectly always identified as being
+	v2 when deciding how to read the info.
+[gcmtool] added a way to replace files. Greatly helps if you just want to modify
+	one file, and not the whole system.
+
+2004/7/14
+0.3.1
+[all] added bold commandline options to extended help.
+[gcmdiskheadertool] implemented editing of diskheaders. see usage (-?) for help
+[gcmdiskheaderinfotool] implemented editing of diskheaders. see usage (-?)
+	for help.
+[gcmbnrtool] added support for reading v2 BNRs
+[all] fixed a bug with path parsing paths that would cause a segfault in special 
+	cases on x86 (and potentially other systems).
+[all] fixed some warnings about casting lvalues when compiling...
+
+2004/7/04
+0.3.0
+[gcmtool] Fixed a bug with getting filenames from directories on little endian
+	systems.
+[gcmbnrtool] Fixed a bug where colors would get screwed up extracting icons
+	on little endian systems.
+[gcmbnrtool] Fixed a bug where colors would get screwed up injecting icons
+	on little endian systems.
+[gcmdiskheadertool] new program: gcmdiskheadertool. Currently only dumps
+	information about the diskheader.
+[gcmdiskheaderinfotool] new program: gcmdiskheaderinfotool.  Currently only
+	dumps information about diskheaderinfo.
+[gcmapploadertool] new program: gcmapploadertool. Currently only dumps
+	information about the apploader.
+
+2004/6/25
+0.2.4
+[gcmtool] Added info output to file listing (shows file sizes, or 
+	directory contents file-count)
+[gcmtool] Added full-path output to file listing. Very handy if you 
+	wanna grep for something.
+[gcmtool] Uses less memory when extracting files > 8MB
+[gcmtool] Added ability to put a filesystem into a game from the local 
+	filesystem.
+
+2004/6/13
+0.2.3
+Added a new program: gcmbnrtool for working with banners. See its help 
+	for info.
+Moved all source into src/ directory for better management.
+
+2004/6/07
+0.2.2
+Added verbose output (use -v)
+Changed some code to make this compile on little endian systems
+
+
+2004/6/03
+0.2.1
+Revamped the usage help (use -?)
+Added option to use abbreviated commands (ie: --extract-disk-header 
+	instead of -edh)
+Added injection of the Disk sections
+Added extraction of boot DOL (--extract-boot-dol)
+
+2004/5/31
+0.2
+Added extraction of the Diskheader
+Added extraction of DiskHeaderInfo
+Added extraction of Apploader (see usage)
+Added extraction of files
+Fixed typo in usage output
+
+2004/5/30
+0.1.1
+Played around with the code a bit. It now compiles on LinuxPPC (gcc 
+3.2.3). Haven't tried it on an x86 yet. Won't compile with gcc 2.96.
+
+2004/5/26
+0.1
+Initial release

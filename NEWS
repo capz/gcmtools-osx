@@ -1,0 +1,34 @@
+2004/7/4 (0.3.0)
+There are now 5 executables in this package:
+	gcmtool
+	gcmbnrtool
+	gcmdiskheadertool
+	gcmdiskheaderinfotool
+	gcmapploadertool
+
+This release is primarily for bugfixes, optimizations and more robust programs.
+There's still a lot to do, but that'll all wait for a later release. Check out
+the website for more information and news (http://gcmtool.sf.net)
+
+gcmdiskheadertool, gcmdiskheaderinfotool, and gcmapploadertool are, for the most 
+part, useless right now, except for the fact that it dumps the full info for 
+a GCM's diskheader. The next release should add editing features and other 
+fun things.
+
+--
+
+2004/6/13 (0.2.3)
+There are now 2 executables in this package:
+	gcmtool:	for working with GameCube DVD images
+	gcmbnrtool:	for working with .bnr files (ie: opening.bnr)
+
+See execute either program with -? to see a list of commandline options 
+and their explanations. I'll create a more robust readme for the next 
+release.
+
+I've also got to put some stuff up on the site.
+
+--
+
+5/24/2004 (0.0)
+First packaging attempt using automake tools.

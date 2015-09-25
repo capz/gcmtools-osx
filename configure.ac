@@ -1,0 +1,9 @@
+AC_INIT(gcmtool,0.3.2)
+AM_INIT_AUTOMAKE
+AC_PROG_CC
+AC_PROG_INSTALL
+AM_CONFIG_HEADER(src/config.h)
+AC_CONFIG_FILES([Makefile
+	src/Makefile])
+AC_OUTPUT
+
